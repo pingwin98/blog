@@ -1,6 +1,7 @@
 ---
 title: Welcome to Jekyll!
 icon: fa-check
+hide: true
 order: 5
 ---
 
