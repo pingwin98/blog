@@ -27,6 +27,12 @@ img {
     width: 100%;
   }
 }
+  div.horizontalgap {
+  float: left;
+  overflow: hidden;
+  height: 1px;
+  width: 0px;
+}
 </style>
 
 
@@ -47,7 +53,11 @@ The enclosure was painted with 3 layers of blue paint, but before it is very imp
 waterslide paper and transferred on the enclosure. <p/>
 <img src="{{ 'assets/images/fuzz_2.jpg' | relative_url }}" alt="Marked holes placing" width="600" height="480" padding="5px">
 
+<div class="horizontalgap" style="width:10px"></div>
+
 <img src="{{ 'assets/images/fuzz_3.jpg' | relative_url }}" alt="Enclosure with holes" width="480" height="600" padding="5px">
+
+<div class="horizontalgap" style="width:10px"></div>
 
 <img src="{{ 'assets/images/fuzz_4.jpg' | relative_url }}" alt="Transfering the label" width="600" height="480" padding="5px">
 <p> At this stage it was ready to solder everything up. The last step was to adjust the 10k trim pot. To that I measured voltage at second transistor's collector and biased it to the 4,5 V. <p/>
@@ -57,10 +67,10 @@ The finall effect of the Silicon Fuzz is on the images below :) <p/>
 
 <div class="row">
   <div class="column">
-    <img src="{{ 'assets/images/fuzz_6.jpg' | relative_url }}" alt="Transfering the label" style="width:100%" >
+    <img src="{{ 'assets/images/fuzz_6.jpg' | relative_url }}" alt="Transfering the label" style="width:480px;height:auto" >
   </div>
 <div class="row">
   <div class="column">
-    <img src="{{ 'assets/images/fuzz_7.jpg' | relative_url }}" alt="Transfering the label" style="width:100%" >
+    <img src="{{ 'assets/images/fuzz_7.jpg' | relative_url }}" alt="Transfering the label" style="width:480px;height:auto" >
   </div>
 
