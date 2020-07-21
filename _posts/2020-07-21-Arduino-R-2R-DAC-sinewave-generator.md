@@ -29,103 +29,105 @@ R21-R24 and C5-C8 are for debouncing purposes. The Citron Maker UNO doesn't have
 <div style="text-align: justify">
 I putted some code on the Arduino and started experimenting. Via buttons there is possibility to change the frequency of the signal (Changing the interval using interrupts). I used a lookup table generated with this <a href="https://daycounter.com/Calculators/Sine-Generator-Calculator.phtml">Website</a>. There is also implemented simple displaying the interval on the LCD. I hope the code is clear.
 </div>
+
+
 ```c
 
-#include "PinChangeInterrupt.h"
-#include <LiquidCrystal.h>
-#include <math.h>
-
-#define FREQ_up A0
-#define FREQ_down A1
-#define FREQ_up5 8
-#define FREQ_down5 9
-
-LiquidCrystal lcd(A4,A5,10,11,12,13);
-
-
-unsigned char sinewave[64] = 
-{
-128,140,152,165,176,188,198,208,
-218,226,234,240,245,250,253,254,
-255,254,253,250,245,240,234,226,
-218,208,198,188,176,165,152,140,
-128,115,103,90,79,67,57,47,
-37,29,21,15,10,5,2,1,
-0,1,2,5,10,15,21,29,
-37,47,57,67,79,90,103,115,
-};
-
-
-byte pointer = 0;
-volatile unsigned int interval = 10;
-char line1[16];
-char line0[16];
-
-
-
-void setup() {
-  // put your setup code here, to run once:
-  lcd.begin(16, 2);
-  lcd.clear();
-  lcd.setCursor(0,1);
-  sprintf(line1,"interval: %3d",interval);
-  lcd.print(line1);
-  pinMode(FREQ_up, INPUT_PULLUP);
-  pinMode(FREQ_down, INPUT_PULLUP);
-  pinMode(FREQ_up5, INPUT_PULLUP);
-  pinMode(FREQ_down5, INPUT_PULLUP);  
-  attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(FREQ_up), freqUp, FALLING);
-  attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(FREQ_down), freqDown, FALLING);
-  attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(FREQ_up5), freqUp5, FALLING);
-  attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(FREQ_down5), freqDown5, FALLING);
-  DDRD = B11111111;
-}
-
-void freqUp() {
-  if (interval > 1){
-  interval -= 1;
-  }
-  lcd.setCursor(0,1);
-  sprintf(line1,"interval: %3d",interval);
-  lcd.print(line1);  
-}
-
-void freqUp5() {
-  if (interval > 5){
-  interval -= 5;
-  }
-  lcd.setCursor(0,1);
-  sprintf(line1,"interval: %3d",interval);
-  lcd.print(line1);  
-}
-
-void freqDown() {
-  if (interval < 400){
-  interval += 1;
-  }
-  lcd.setCursor(0,1);
-  sprintf(line1,"interval: %3d",interval);
-  lcd.print(line1);
-}
-
-void freqDown5() {
-  if (interval < 395){
-  interval += 5;
-  }
-  lcd.setCursor(0,1);
-  sprintf(line1,"interval: %3d",interval);
-  lcd.print(line1);
-}
-
-void loop() {
-  // put your main code here, to run repeatedly:
+  #include "PinChangeInterrupt.h"
+  #include <LiquidCrystal.h>
+  #include <math.h>
   
-  PORTD = sinewave[pointer] & 0xFF;
-  pointer = (pointer + 1) & 63;
-  
-  delayMicroseconds(interval);
+  #define FREQ_up A0
+  #define FREQ_down A1
+  #define FREQ_up5 8
+  #define FREQ_down5 9
 
-}
+  LiquidCrystal lcd(A4,A5,10,11,12,13);
+
+
+  unsigned char sinewave[64] = 
+  {
+  128,140,152,165,176,188,198,208,
+  218,226,234,240,245,250,253,254,
+  255,254,253,250,245,240,234,226,
+  218,208,198,188,176,165,152,140,
+  128,115,103,90,79,67,57,47,
+  37,29,21,15,10,5,2,1,
+  0,1,2,5,10,15,21,29,
+  37,47,57,67,79,90,103,115,
+  };
+
+
+  byte pointer = 0;
+  volatile unsigned int interval = 10;
+  char line1[16];
+  char line0[16];
+
+
+
+  void setup() {
+    // put your setup code here, to run once:
+    lcd.begin(16, 2);
+    lcd.clear();
+    lcd.setCursor(0,1);
+    sprintf(line1,"interval: %3d",interval);
+    lcd.print(line1);
+    pinMode(FREQ_up, INPUT_PULLUP);
+    pinMode(FREQ_down, INPUT_PULLUP);
+    pinMode(FREQ_up5, INPUT_PULLUP);
+    pinMode(FREQ_down5, INPUT_PULLUP);  
+    attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(FREQ_up), freqUp, FALLING);
+    attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(FREQ_down), freqDown, FALLING);
+    attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(FREQ_up5), freqUp5, FALLING);
+    attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(FREQ_down5), freqDown5, FALLING);
+    DDRD = B11111111;
+  }
+
+  void freqUp() {
+    if (interval > 1){
+    interval -= 1;
+    }
+    lcd.setCursor(0,1);
+    sprintf(line1,"interval: %3d",interval);
+    lcd.print(line1);  
+  }
+
+  void freqUp5() {
+    if (interval > 5){
+    interval -= 5;
+    }
+    lcd.setCursor(0,1);
+    sprintf(line1,"interval: %3d",interval);
+    lcd.print(line1);  
+  }
+
+  void freqDown() {
+    if (interval < 400){
+    interval += 1;
+    }
+    lcd.setCursor(0,1);
+    sprintf(line1,"interval: %3d",interval);
+    lcd.print(line1);
+  }
+
+  void freqDown5() {
+    if (interval < 395){
+    interval += 5;
+    }
+    lcd.setCursor(0,1);
+    sprintf(line1,"interval: %3d",interval);
+    lcd.print(line1);
+  }
+
+  void loop() {
+    // put your main code here, to run repeatedly:
+
+    PORTD = sinewave[pointer] & 0xFF;
+    pointer = (pointer + 1) & 63;
+
+    delayMicroseconds(interval);
+
+  }
 
 ```
 
