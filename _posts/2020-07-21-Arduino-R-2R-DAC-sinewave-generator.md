@@ -14,7 +14,7 @@ which lacks a build-in DAC, it seems to be a good thing. Let's make a simple exa
 Firstly, I made a circuit on breadboard, checked if everything is working and so on, but now I will show and discuss the schematic
 </div>
 
-<img src="{{'assets/images/r-2r sine generator.jpg' | relative_url}}" alt="schematic" align="middle">
+<img src="{{'assets/images/r-2r sine generator.jpg' | relative_url}}" alt="schematic" align="center">
 
 <div style="text-align: justify">
 The resistors R1-R16 form the discussed digital to analog converter. <a href="https://www.youtube.com/watch?v=Pc1aFloxSMw">Here</a> is nicely explained how R-2R DAC works.
@@ -137,19 +137,19 @@ I putted some code on the Arduino and started experimenting. Via buttons there i
 So I achieved pretty nice sinewave. Max frequency I've achieved is about 9kHz. The blue sinewave on osciloscope is measured on 3rd pin of R25. Yellow one is at the output (after C4)
 </div>
 
-<img src="{{'assets/images/MAP001.BMP' | relative_url}}" alt="osciloscope1" align="middle" >
+<img src="{{'assets/images/MAP001.BMP' | relative_url}}" alt="osciloscope1" align="center" >
 
 <div style="text-align: justify">
   The R25 pot gives possibility to change the amplitude of the signal.
 </div>
 
-<img src="{{'assets/images/MAP002.BMP' | relative_url}}" alt="osciloscope1" align="middle" >
+<img src="{{'assets/images/MAP002.BMP' | relative_url}}" alt="osciloscope1" align="center" >
 
 <div style="text-align: justify">
   And via buttons we can change the frequency.
 </div>
 
-<img src="{{'assets/images/MAP003.BMP' | relative_url}}" alt="osciloscope1" align="middle">
+<img src="{{'assets/images/MAP003.BMP' | relative_url}}" alt="osciloscope1" align="center">
 
 <div style="text-align: justify">
   And there it is, sinewave generator using Arduino, and some basics electronic elements. There are some better ways to generate sinewave of course, but I think that was good example how to use and change arduino outputs at the same time, use interrupts etc. I won't use it as sinewave generator, because it has too small frequency range. In some time im going to build function generator based on ICL8038 which will have better performances.
