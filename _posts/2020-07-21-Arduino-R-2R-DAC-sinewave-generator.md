@@ -12,7 +12,7 @@ which lacks a build-in DAC, it seems to be a good thing. Let's make a simple exa
 Firstly, I made a circuit on breadboard, checked if everything is working and so on, but now I will show and discuss the schematic
 </div>
 
-<img src="{{assets/images/r-2r sine generator.jpg | relative_url}}" alt="schematic">
+<img src="{{'assets/images/r-2r sine generator.jpg' | relative_url}}" alt="schematic">
 
 <div style="text-align: justify">
 The resistors R1-R16 form the discussed digital to analog converter. [Here](https://www.youtube.com/watch?v=Pc1aFloxSMw) is good wxplained how R-2R DAC works.
