@@ -2,7 +2,7 @@
 title: 2-2R DAC sinewave generator with Arduino
 author: Karol
 layout: post
-hide: false
+hide: true
 ---
 
 <div style="text-align: justify"> R - 2R is one of the simpliest way to perform digital to analog conversion. In combination with Arduino,
