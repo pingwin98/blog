@@ -1,8 +1,10 @@
 ---
-title: 2-2R DAC sinewave generator with Arduino
+title: 2-2R DAC with Arduino
 author: Karol
 layout: post
-hide: true
+icon: fa-microchip
+tags: Arduino programming DAC electronics
+hide: false
 ---
 
 <div style="text-align: justify"> R - 2R is one of the simpliest way to perform digital to analog conversion. In combination with Arduino,
@@ -150,6 +152,6 @@ So I achieved pretty nice sinewave. Max frequency I've achieved is about 9kHz. T
 <img src="{{'assets/images/MAP003.BMP' | relative_url}}" alt="osciloscope1" align="middle">
 
 <div style="text-align: justify">
-  And there it is, sinewave generator using Arduino, and some basics electronic elements. There are some better ways to generate sinewave of course, but I think that was good example how to use and change arduino outputs and the same time, use interrupts etc. I won't use it as sinewave generator, because it has too small frequency range. In some time im going to build function generator based on ICL8038 which will have better performances.
+  And there it is, sinewave generator using Arduino, and some basics electronic elements. There are some better ways to generate sinewave of course, but I think that was good example how to use and change arduino outputs at the same time, use interrupts etc. I won't use it as sinewave generator, because it has too small frequency range. In some time im going to build function generator based on ICL8038 which will have better performances.
 </div>
 
