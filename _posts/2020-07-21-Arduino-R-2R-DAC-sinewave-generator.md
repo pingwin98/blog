@@ -29,7 +29,7 @@ R21-R24 and C5-C8 are for debouncing purposes. The Citron Maker UNO doesn't have
 <div style="text-align: justify">
 I putted some code on the Arduino and started experimenting. Via buttons there is possibility to change the frequency of the signal (Changing the interval using interrupts). I used a lookup table generated with this <a href="https://daycounter.com/Calculators/Sine-Generator-Calculator.phtml">Website</a>. There is also implemented simple displaying the interval on the LCD. I hope the code is clear.
 </div>
-``` C++
+```C++
 #include "PinChangeInterrupt.h"
 #include <LiquidCrystal.h>
 #include <math.h>
