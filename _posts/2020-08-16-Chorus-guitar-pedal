@@ -1,0 +1,57 @@
+---
+layout: post
+title: Chorus guitar effect build
+author: Karol
+icon: fa-wrench
+tags: guitar pedals chorus boss 
+excerpt: Guitar with chorus defines pure tone of 80's music. Every guitarist who loves 80's rock music needs to have a chorus pedal in his board. But instead buiyng chorus, it's better to
+build  one! 
+---
+<html>
+
+
+<style>
+  img.image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  margin-top:20px;
+  margin-bottom:20px;
+  
+}
+</style>
+
+<body>
+<p align="justify">Guitar with chorus defines pure tone of 80's music. Every guitarist who loves 80's rock music needs to have a chorus pedal in his board. But instead buiyng chorus, it's better to
+build  one! </p>
+
+<p align="justify">I've built chorus based on BOSS CE-2 schematic as it's widely accessible on the internet and, what can I say, it's probably most iconic chorus pedal.
+I have put to use a schematic at BYOC (<a href="http://byocelectronics.com/analogchorusschematic.pdf">link</a>) which gets rid of boss FET switching, add led rate indicator and
+change MN3007, MN3101 to MN3207, MN3102. BOSS CE-2 is nicely analysed <a href="https://www.electrosmash.com/boss-ce-2-analysis">here</a> </p>
+
+<p align="justify">I've designed pcb board for this pedal in EAGLE. Ordered 5 pcbs for 7$ at JLCpcb. When pcb arrived it was time to solder everything up, prepare enclosure,
+assemble and play</p>
+
+<img class="image" src="{{ 'assets/images/chorus/pcb.jpg' | relative_url }}" alt="designed pcb in EAGLE" width="600" height="480"  >
+
+<img class="image" src="{{ 'assets/images/chorus/pcb_z_chin.jpg' | relative_url }}" alt="pcb from China" width="600" height="480" rotate="90" >
+
+<img class="image" src="{{ 'assets/images/chorus/pcb_z_chin_2.jpg' | relative_url }}" alt="pcb from China" width="600" height="480" >
+
+<img class="image" src="{{ 'assets/images/chorus/polutowane.jpg' | relative_url }}" alt="soldered PCB" width="600" height="480" >
+
+<p align="justify">I have made anclosure on my own, designed in Inventor and then 3d printed. 3d printed enclosures are great equivalent to the metal ones, but need to remember
+is to put copper tape int enclosure to prevent EM noise</p>
+
+<img class="image" src="{{ 'assets/images/chorus/obudowa.jpg' | relative_url }}" alt="enclosure" width="600" height="480" >
+
+<img class="image" src="{{ 'assets/images/chorus/wnetrze.jpg' | relative_url }}" alt="inside enclosure" width="600" height="480" >
+
+<p align="justify">The final effect is shown below. For more info email me :) </p>
+
+<img class="image" src="{{ 'assets/images/chorus/gotowe.jpg' | relative_url }}" alt="final effect" width="600" height="480" >
+
+</body>
+</html>
