@@ -1,5 +1,5 @@
 ---
-title: Simple tripod with 1/4" thread v1
+title: Tripod with 1/4" thread v1
 author: Karol
 layout: post
 icon: fa-cog
