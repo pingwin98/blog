@@ -8,26 +8,28 @@ hide: false
 ---
 
 <div style="text-align: justify">
-As one of projects on university I've made my own guitar tuner using Raspberry Pi, everything was coded in Python 3. The tuner is packed up in 3d printed enclosure. 
+As one of projects on the university I've made my own guitar tuner using Raspberry Pi. Everything was coded in Python 3. The tuner is packed up in 3d printed enclosure (but it's only a prototype, needs to be polished :) ). 
 
 <p align="center">
 <img src="{{'assets/images/guitar_tuner/ready_tuner.jpg' | relative_url}}" alt="guitar tuner using RPI" width="100%" height="auto">
 </p>
 
-#Things I used to build guitar tuner#
-
-- Raspberry Pi 3B+,
-- USB sound card,
-- Tie clip microphone,
-- LED diode,
-- 2x buttons, 
-- 2x16 LCD display,
-- 10k potentiometer
+<h1>Things I used to build guitar tuner</h1>
+<ul>
+<li>Raspberry Pi 3B+,</li>
+<li>USB sound card,</li>
+<li>Tie clip microphone,</li>
+<li>LED diode,</li>
+<li>2x buttons, </li>
+<li>2x16 LCD display,</li>
+<li>10k potentiometer </li>
+</ul>
 
 USB external soundcard is needed as Rpi doesn't have microphone input. As microphone I used tie clip mic - it can be attachet easily to guitar near the strings. LED diode is for indication. Button is needed for turning on and off the tuner. Potentiometer is needed for LCD display.
 
 <p align="center">
-[![youtube video](http://img.youtube.com/vi/jrpyii77ICg&t=4s/0.jpg)](http://www.youtube.com/watch?v=jrpyii77ICg&t=4s "Video Title")
+<iframe width="600" height="400" src="http://www.youtube.com/watch?v=jrpyii77ICg&t=4s">
+</iframe>
 </p>
 
 In the video above it is visible how the tuner works. After startup you can turn on tuner with the button. The second button is used to turn off the tuner when it is running, or shutdown the Linux system when the Rpi is waiting for turning on  the tuner.
