@@ -31,13 +31,17 @@ USB external soundcard is needed as Rpi doesn't have microphone input. As microp
   <a href="http://www.youtube.com/watch?v=jrpyii77ICg&t=4s">Video with the tuner.</a>
 </p>
 
-In the video above it is visible how the tuner works. After startup you can turn on tuner with the button. The second button is used to turn off the tuner when it is running, or shutdown the Linux system when the Rpi is waiting for turning on  the tuner.<br/>
+In the video above it is visible how the tuner works. After startup you can turn on tuner with the button. The second button is used to turn off the tuner when it is running, or shutdown the Linux system when the Rpi is waiting for turning on  the tuner.
+<br/>
 
 The program responsible for tuning is written in python. The audio is collected using pyaudio lib. Then audio signal is filtrated and transformed with Fourier Transformation. With finding the peaks in Fourier transform of a signal, the program matches string frequency with musical notes. <br/>
+<br/>
 
 In the midlle of the screen current note, and arrow(tune up, or down) is displayed. On the left we have string frequency and on the right there is an octave of the played note. <br/>
+<br/>
 
 The tuners accuarcy is about +/-0.3 Hz. But the accuarcy can be easily increased with zero-padding in Fourier Transformation. Anyway 0.3Hz is quite good and makes the tuner very fast (I didn't try increasing accuarcy more than 0.3 Hz but i thing it won't strongly affect the speed of tuner).<br/>
+<br/>
 
 Some more photos below:
 
