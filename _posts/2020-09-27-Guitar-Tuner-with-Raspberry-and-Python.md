@@ -29,8 +29,6 @@ USB external soundcard is needed as Rpi doesn't have microphone input. As microp
 
 <p align="center">
   <a href="http://www.youtube.com/watch?v=jrpyii77ICg&t=4s">Video with the tuner.</a>
-<iframe width="600" height="400" src="http://www.youtube.com/watch?v=jrpyii77ICg&t=4s">
-</iframe>
 </p>
 
 In the video above it is visible how the tuner works. After startup you can turn on tuner with the button. The second button is used to turn off the tuner when it is running, or shutdown the Linux system when the Rpi is waiting for turning on  the tuner.
