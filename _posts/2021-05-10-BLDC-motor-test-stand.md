@@ -10,7 +10,7 @@ hide: false
 <div style="text-align: justify">
 This project was made as part of my thesis at  college. The main objective of this project was to design and create test stand which was to be used to conduct research on BLDC motors. The basic assumption of the designed test stand was possibility of testing motors with a power of up to 2 kW used in model making and motors built into the wheel hub with a power of up to 400 W.
 
-<h2>The test bench enables:</h2>
+<h6>The test bench enables:</h6>
 <ul>
 <li>Measurment of supply voltage;</li>
 <li>Measurment of supply current;</li>
