@@ -34,20 +34,20 @@ The project was sponsored by company which needed such a test stand for their re
 Figures above show the 3D model of test stand made in Inventor Pro during designing process. There are photos of ready prototype:
 
 <p align="center">
-<img src="{{'assets/images/bldc_motor_test_stand/ready_1.png' | relative_url}}" alt="test stand #1" width="100%" height="auto">
+<img src="{{'assets/images/bldc_motor_test_stand/ready_1.jpg' | relative_url}}" alt="test stand #1" width="100%" height="auto">
 </p>
 
 <p align="center">
-<img src="{{'assets/images/bldc_motor_test_stand/ready_2.png' | relative_url}}" alt="test stand #2" width="100%" height="auto">
+<img src="{{'assets/images/bldc_motor_test_stand/ready_2.jpg' | relative_url}}" alt="test stand #2" width="100%" height="auto">
 </p>
 
 <p align="center">
-<img src="{{'assets/images/bldc_motor_test_stand/electronics.png' | relative_url}}" alt="test stand electronics" width="100%" height="auto">
+<img src="{{'assets/images/bldc_motor_test_stand/electronics.jpg' | relative_url}}" alt="test stand electronics" width="100%" height="auto">
 </p>
 
 Here is test stand with hub motor mounted:
 <p align="center">
-<img src="{{'assets/images/bldc_motor_test_stand/hub.png' | relative_url}}" alt="test stand during tests" width="100%" height="auto">
+<img src="{{'assets/images/bldc_motor_test_stand/hub.jpg' | relative_url}}" alt="test stand during tests" width="100%" height="auto">
 </p>
 
 The gui:
